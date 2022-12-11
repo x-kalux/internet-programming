@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import path from 'node:path';
 import { IncomingMessage } from 'node:http';
-const https = require('node:https');
+import https from 'https';
 
 dotenv.config()
 
