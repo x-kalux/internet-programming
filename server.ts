@@ -1,10 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import https from 'node:https';
-import { IncomingMessage } from 'node:http';
 import path from 'node:path';
-
+import { IncomingMessage } from 'node:http';
+const https = require('node:https');
 
 dotenv.config()
 
