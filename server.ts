@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import path from 'node:path';
+import path from 'path';
 import { IncomingMessage } from 'node:http';
 import https from 'https';
 
