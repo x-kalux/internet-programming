@@ -59,6 +59,12 @@ app.post('/', (request: Request, response: Response) => {
     if (request.body.type === 'School') {
         path = 'school'
     }
+    if (request.body.isDone !== '') {
+        const update_id = request.body.isDone
+        Todo.findOneAndUpdate({ _id: update_id }, [{ $set: { isDone: { $not: "$isDone" } } }], () => {
+            response.redirect(path)
+        })
+    }
     if (newTask !== '') {
         const task = new Todo({
             task: newTask,
