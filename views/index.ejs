@@ -10,9 +10,9 @@
                 <div class="card">
                     <% tasks.forEach(item => { %>
                     <div class="item">
-                        <input type="checkbox">
-                        <p><%=item%></p>
-                        <button class="btn-delete" type="submit" name="delete" value="<%=item%>">-</button>
+                        <input type="checkbox" <% if(item.isDone){ %> checked <% } %>>
+                        <p><%=item.task%></p>
+                        <button class="btn-delete" type="submit" name="delete" value="<%=item._id%>">-</button>
                     </div>
                     <% }) %>
 
